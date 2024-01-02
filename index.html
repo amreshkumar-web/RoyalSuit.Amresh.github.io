@@ -6,8 +6,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Josefin+Sans:wght@100&family=Tilt+Neon&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Josefin+Sans:wght@100&family=Lilita+One&family=Tilt+Neon&family=Yellowtail&display=swap" rel="stylesheet">
 </head>
 <body>
  <!--  <div class="brightball" id="brightball"></div> -->
@@ -15,28 +15,39 @@
     <video id="video" src="entry.mp4" autoplay muted loop></video>
        <h1>ROYAL SUIT</h1>
        <button onclick="getstart()" class="start" type="button">Get Start <svg width="15px" height="15px" viewBox="0 0 1024 1024" class="icon"  version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M256 120.768L306.432 64 768 512l-461.568 448L256 903.232 659.072 512z" fill="gold" /></svg></button>
-   
-       
-      
        </div>
     
     <div class="parent" id="parent">
+      <div class="menubar" id="menubar">
+        <option>Home</option>
+        <option>Suits</option>
+        <option>Category</option>
+        <option>New Arrival</option>
+        <option>About</option>
+        <button type="button" class="exit" onclick="exit()">X</button>
+       </div> 
       
-   <!-----    nav bar start       -->     
+   <!-----    nav bar start       -->    
      <div class="navbar">
        <logo>RoyalSuit</logo>
        <div class="navoption">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+        <div onclick="profile()" class="profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
             <path d="M10.9202 8.57506C11.7048 7.9578 12.2774 7.11134 12.5585 6.15346C12.8396 5.19558 12.8151 4.17391 12.4885 3.23057C12.1619 2.28724 11.5494 1.46917 10.7362 0.890158C9.92302 0.311148 8.94957 0 7.9513 0C6.95302 0 5.97957 0.311148 5.16637 0.890158C4.35317 1.46917 3.74066 2.28724 3.41406 3.23057C3.08745 4.17391 3.06299 5.19558 3.34407 6.15346C3.62516 7.11134 4.19782 7.9578 4.98237 8.57506C3.63802 9.11366 2.46502 10.007 1.58843 11.1598C0.711845 12.3126 0.164527 13.6817 0.00482697 15.1211C-0.00673294 15.2262 0.00251948 15.3325 0.0320558 15.434C0.0615921 15.5356 0.110834 15.6303 0.17697 15.7127C0.310537 15.8793 0.504809 15.986 0.717048 16.0094C0.929287 16.0327 1.14211 15.9708 1.30869 15.8372C1.47528 15.7037 1.58198 15.5094 1.60532 15.2971C1.78105 13.7328 2.52696 12.2881 3.70055 11.2389C4.87414 10.1898 6.39313 9.60981 7.9673 9.60981C9.54147 9.60981 11.0605 10.1898 12.234 11.2389C13.4076 12.2881 14.1536 13.7328 14.3293 15.2971C14.351 15.4938 14.4449 15.6754 14.5926 15.8069C14.7404 15.9384 14.9317 16.0106 15.1295 16.0094H15.2176C15.4273 15.9852 15.6191 15.8792 15.751 15.7143C15.8829 15.5494 15.9443 15.3391 15.9218 15.1291C15.7613 13.6856 15.2111 12.313 14.33 11.1584C13.4489 10.0038 12.2702 9.11081 10.9202 8.57506ZM7.9513 8.00688C7.3182 8.00688 6.69932 7.81915 6.17292 7.46742C5.64652 7.11569 5.23624 6.61576 4.99396 6.03086C4.75169 5.44595 4.6883 4.80234 4.81181 4.18141C4.93532 3.56047 5.24018 2.99011 5.68785 2.54244C6.13552 2.09478 6.70588 1.78991 7.32681 1.6664C7.94774 1.54289 8.59136 1.60628 9.17626 1.84856C9.76117 2.09083 10.2611 2.50111 10.6128 3.02751C10.9646 3.55391 11.1523 4.17279 11.1523 4.80589C11.1523 5.65485 10.815 6.46903 10.2147 7.06933C9.61444 7.66964 8.80025 8.00688 7.9513 8.00688Z" fill="white"/>
             </svg>
+        </div>
 
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
+            <div onclick="cart()" class="viewcartbtn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none">
                 <path d="M19.1763 5.4223C19.1098 5.34457 19.0273 5.28216 18.9344 5.23938C18.8415 5.19659 18.7404 5.17444 18.6381 5.17445H14.3892V2.34184C14.3892 1.77839 14.1654 1.23803 13.767 0.839616C13.3685 0.441203 12.8282 0.217377 12.2647 0.217377H8.01582C7.45238 0.217377 6.91201 0.441203 6.5136 0.839616C6.11519 1.23803 5.89136 1.77839 5.89136 2.34184V5.17445H1.64244C1.53979 5.17328 1.43812 5.19445 1.34446 5.23649C1.2508 5.27852 1.16741 5.34041 1.10005 5.41788C1.03269 5.49534 0.982972 5.58653 0.954351 5.68511C0.925729 5.7837 0.918884 5.88733 0.934289 5.98882L2.26562 14.5929C2.31683 14.9306 2.48838 15.2384 2.74864 15.4597C3.00891 15.6809 3.34036 15.8006 3.68192 15.7967H16.6128C16.9544 15.8006 17.2858 15.6809 17.5461 15.4597C17.8063 15.2384 17.9779 14.9306 18.0291 14.5929L19.3463 5.98882C19.3604 5.88772 19.3526 5.78475 19.3233 5.68697C19.2939 5.58918 19.2438 5.4989 19.1763 5.4223ZM7.30767 2.34184C7.30767 2.15402 7.38227 1.9739 7.51508 1.8411C7.64788 1.70829 7.828 1.63368 8.01582 1.63368H12.2647C12.4526 1.63368 12.6327 1.70829 12.7655 1.8411C12.8983 1.9739 12.9729 2.15402 12.9729 2.34184V5.17445H7.30767V2.34184ZM16.6128 14.3804H3.66776L2.47098 6.59075H17.8096L16.6128 14.3804Z" fill="white"/>
               </svg>
+            </div>
 
-              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16" fill="none">
-                <path d="M0.353027 15.3332H22.3314V12.8912H0.353027V15.3332ZM0.353027 9.22813H22.3314V6.78609H0.353027V9.22813ZM0.353027 0.681V3.12304H22.3314V0.681H0.353027Z" fill="white"/>
-              </svg>
+              <div onclick="burger()" class="menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="23" height="16" viewBox="0 0 23 16" fill="none">
+                  <path d="M0.353027 15.3332H22.3314V12.8912H0.353027V15.3332ZM0.353027 9.22813H22.3314V6.78609H0.353027V9.22813ZM0.353027 0.681V3.12304H22.3314V0.681H0.353027Z" fill="white"/>
+                </svg>
+              </div>
        </div>
   </div>
   <!-----    nav bar end       -->

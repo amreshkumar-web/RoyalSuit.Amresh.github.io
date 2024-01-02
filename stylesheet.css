@@ -57,7 +57,28 @@ animation-iteration-count: 1;
 -webkit-text-stroke: 4px goldenrod;
  
 }
-
+.menubar{position: absolute;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:14rem;
+    font-weight: bolder;
+    z-index: -1;
+    font-family: 'Lilita One', sans-serif;
+    color: rgb(0, 0, 0);
+    transform: scale(100);
+    mix-blend-mode: screen;
+    opacity: 0;
+  
+}
+.menubar option:hover{
+    transition:0.5s;
+    transform: scale(1.1);
+}
 
 
 
@@ -236,7 +257,16 @@ animation-iteration-count: 1;
     gap: 20px;
     margin-top: 15px;
 }
-
+.exit{
+    right: 5%;
+    top: 3%;
+    width:50px;
+    height: 40px;
+    border: 2px solid red;
+    color: red;
+    font-size: 2rem;
+    position: absolute;
+}
 .addToCart, .buy{
     width: 130px;
     height: 50px;
@@ -307,6 +337,11 @@ animation-iteration-count: 1;
     justify-content: start;
     gap: 10px;
 }
+.color{
+    width: 260px;
+    left: 18vw;
+
+}
 .sizebtn{
     width: 40px;
     height: 30px;
@@ -335,7 +370,32 @@ animation-iteration-count: 1;
     }
 }
 /* Responsive lines of code */
-@media(max-width:600px){
+@media(max-width:1032px){
+    .color{
+        left: 5vw;                         ;
+    }
+    .buybox{
+        width: 299px;
+        left: 67.5%;
+    
+    }
+    html{
+        font-size: 8.5px;
+    }
+    .buybox p{
+       font-size: 1.5rem;
+    }
+    .mainimg{
+        width: 289px;
+    }
+    .buybox DescContent {
+        width: 230px;
+    }
+    .welcome h1{
+        -webkit-text-stroke: 1px gold;
+    }
+}
+@media(max-width:834px){
     .mainimg{
         width: 270px;
     }
@@ -388,5 +448,46 @@ animation-iteration-count: 1;
         width: 31px;
         height: 27px;
     }
-    
+    .welcome h1{
+        font-size: 10rem;
+    }
+    .backcloth,.backcloth2
+    {
+        width: 250px;
+    }
+    .backcloth{
+
+        left: -9vw;
+    }
+    .backcloth2{
+        left: 57vw;
+    }
+}
+@media(max-width:428px){
+    .welcome h1{
+        font-size: 8rem;
+    }
+}
+@media(max-width:908px){
+    .welcome h1{
+        font-size: 8rem;
+    }
+    .buybox DescContent {
+        width: 260px;
+    }
+}
+@media(max-width:341px){
+    .welcome h1{
+        font-size: 5rem;
+    }
+}
+@media(max-width:500px){
+    .menubar option{
+        font-size: 9rem;
+    }
+}
+@media(max-width:319px){
+    .menubar option{
+        font-size: 7rem;
+    }
 }

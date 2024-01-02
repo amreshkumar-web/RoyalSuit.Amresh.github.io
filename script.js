@@ -4,7 +4,32 @@ var maincloth = document.querySelectorAll(".mainimg")[0];
 
 var windowXMaxWidth=window.innerWidth;
 
+function burger(){ 
+   /*  maincloth.style.transition="3s"
+    maincloth.style.transform="scale(100)";
+    maincloth.style.zIndex="99";
+ */
+    document.getElementById("menubar").style.opacity="100";
+   document.getElementById("menubar").style.transition="2s"
+   document.getElementById("menubar").style.zIndex="9999999"
+    document.getElementById("menubar").style.transform="scale(1)"
+    document.getElementById("menubar").style.zIndex="9999"
+   setTimeout(function(){document.getElementById("menubar").style.transition="2s"},2000)
+}
+function profile(){
+alert("This page is under Maintenance");
+}
+function cart(){
+    alert("This page is under Maintenance");
+    }
 
+function exit(){
+   
+    document.getElementById("menubar").style.transition="2s"
+    document.getElementById("menubar").style.transform="scale(100)"
+     document.getElementById("menubar").style.zIndex="-1"
+     document.getElementById("menubar").style.opacity="0";
+}
 
 function getstart(){
     document.getElementById("video").pause();
@@ -62,9 +87,11 @@ if(currentXPosition<=0.6){
     currentXPosition=0.6;
 }
 
-maincloth.style.transition="0.5s";
+if(windowXMaxWidth>=700){
+    maincloth.style.transition="0.5s";
 maincloth.style.transitionDelay="0s";
 maincloth.style.filter = "brightness(" + currentXPosition + ") drop-shadow(" + (currentXPosition*20) + "px " + (-currentYPosition*5) + "px " +"10px rgb(0, 0, 0,0.3))";
+}
 
 //document.getElementById("brightball").style.left=event.clientX + "px";
 //document.getElementById("brightball").style.top=event.clientY + "px";
@@ -76,7 +103,6 @@ function clear(){
     document.getElementById("backcloth2").style.animation="";
 }
 function light(){
-    document.getElementById("parent").style.filter="brightness(1.3)";
     
     document.getElementById("light2").style.opacity="100";
     document.getElementById("light1").style.opacity="100";
@@ -99,8 +125,9 @@ function animations(){
     document.getElementById("light2").style.transitionDelay="1s"
     document.getElementById("light2").style.opacity="0";
     document.getElementById("light1").style.opacity="0";
-    document.getElementById("parent").style.transition="0.2s"
-    document.getElementById("parent").style.filter="brightness(0.3)";
+    
+
+
     
    
 }
@@ -111,6 +138,7 @@ function maroon(){
     maincloth.style.left="-100%";
     document.getElementById("mainoliv").style.left="-100%"; 
     maincloth = document.querySelectorAll(".mainimg")[2];
+    maincloth.style.filter="brightness(1.2)";
     document.getElementById("mainmaroon").style.left="50%";
     setTimeout( function(){backcloths("mainmaroon.png")},3000);
     setTimeout(clear, 5000);
@@ -124,6 +152,7 @@ function oliv(){
     animations();    
     maincloth.style.left="-100%";
     maincloth = document.querySelectorAll(".mainimg")[1];
+    maincloth.style.filter="brightness(1.2)";
     document.getElementById("mainoliv").style.left="50%";
     setTimeout( function(){backcloths("mainoliv.png")},3000);
     setTimeout(clear, 5000);
@@ -143,4 +172,8 @@ function black(){
     setTimeout(light , 3000);
     check=0;
     }
+
+
+    //menu bar
+    
 }
