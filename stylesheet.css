@@ -2,8 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: url(cursor.png), auto;
-    
 }
 html{
     font-size: 10px;
